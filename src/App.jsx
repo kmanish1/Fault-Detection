@@ -35,22 +35,24 @@ function App() {
         const resultData = data.result[0];
         switch (resultData) {
           case 0:
-            setResult("LG Fault");
+            setResult("LG Fault: Line-to-Ground Fault - Points to a short circuit or fault between a transmission line and ground.");
             break;
           case 1:
-            setResult("LLLG Fault");
+            setResult("LLLG Fault: Multiple Line-to-Line and Line-to-Ground Faults - Denotes a complex scenario with multiple faults involving transmission lines and ground.");
             break;
           case 2:
-            setResult("LLG Fault");
+            setResult("LLG Fault: Line-to-Line and Line-to-Ground Fault - Indicates a combination of faults involving both transmission lines and ground.");
             break;
           case 3:
-            setResult("LLL Fault");
+            setResult("LLL Fault: Triple Line-to-Line Fault - Suggests multiple short circuits or faults between transmission lines.");
             break;
           case 4:
-            setResult("LL Fault");
+            setResult(
+              "LL Fault: Line-to-Line Fault - Indicates a short circuit or fault between two transmission lines."
+            );
             break;
           case 5:
-            setResult("No Fault");
+            setResult("No Fault is detected");
             break;
           default:
             setResult("Please try after some time");
